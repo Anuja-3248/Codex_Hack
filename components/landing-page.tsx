@@ -108,7 +108,7 @@ export function LandingPage() {
 
       <header className="relative z-10 border-b border-white/10 bg-slate-950/35 backdrop-blur-xl">
         <div className="container flex min-h-16 items-center justify-between gap-4">
-          <SiteLogo />
+          <SiteLogo priority imageClassName="w-[148px] sm:w-[168px]" />
           <nav className="hidden items-center gap-6 text-sm text-slate-400 md:flex">
             <a href="#dashboard-preview" className="hover:text-white">
               Dashboard

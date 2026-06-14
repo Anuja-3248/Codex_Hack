@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ArrowRight, LockKeyhole, Mail, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, LockKeyhole, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,7 +26,7 @@ export default function LoginPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-night p-4">
       <div className="fixed left-4 top-4 z-50 rounded-3xl bg-slate-950/80 p-3 shadow-xl shadow-slate-900/15 backdrop-blur-xl sm:left-6 sm:top-6">
-        <SiteLogo showText={false} size={44} />
+        <SiteLogo size={44} />
       </div>
       <div className="absolute inset-0 subtle-grid opacity-50" />
       <div className="absolute inset-x-0 top-0 h-72 bg-forge-radial" />
@@ -46,9 +46,7 @@ export default function LoginPage() {
         </Link>
         <Card className="overflow-hidden">
           <CardHeader className="pb-4">
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-blue shadow-glow">
-              <Sparkles className="h-5 w-5 text-white" />
-            </div>
+            <SiteLogo className="mb-5" imageClassName="w-[172px]" />
             <CardTitle className="text-2xl">Continue to PathForge AI</CardTitle>
             <p className="text-sm leading-6 text-slate-400">
               Use any email and password to enter the demo dashboard.

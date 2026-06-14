@@ -10,7 +10,6 @@ import {
   ClipboardCheck,
   Gauge,
   Search,
-  Sparkles,
   Target,
   Trophy
 } from "lucide-react";
@@ -47,17 +46,17 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
 
   if (!isAuthorized) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-night px-4 text-slate-300">
+      <div className="dashboard-palette flex min-h-screen items-center justify-center px-4 text-slate-600">
         Checking demo access...
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-night text-foreground">
+    <div className="dashboard-palette min-h-screen text-foreground">
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-72 border-r border-white/10 bg-slate-950/55 p-4 backdrop-blur-2xl lg:block">
         <div className="px-2 py-3">
-          <SiteLogo />
+          <SiteLogo imageClassName="w-[168px]" />
           <p className="mt-2 text-xs text-slate-400">Career intelligence</p>
         </div>
 
@@ -103,12 +102,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       <div className="lg:pl-72">
         <header className="sticky top-0 z-20 border-b border-white/10 bg-slate-950/50 backdrop-blur-2xl">
           <div className="flex min-h-16 items-center gap-3 px-4 sm:px-6 lg:px-8">
-            <Link href="/" className="flex items-center gap-2 lg:hidden">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-to-br from-purple to-blue">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
-              <span className="text-sm font-semibold text-white">PathForge AI</span>
-            </Link>
+            <SiteLogo className="lg:hidden" imageClassName="w-[132px]" />
 
             <div className="hidden flex-1 items-center md:flex">
               <div className="relative w-full max-w-xl">

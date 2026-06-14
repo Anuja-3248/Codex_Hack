@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { AlertCircle, ArrowLeft, Compass, Sparkles } from "lucide-react";
+import { AlertCircle, ArrowLeft, Compass } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SiteLogo } from "@/components/ui/site-logo";
 import { cn } from "@/lib/utils";
 
 export default function NotFound() {
@@ -12,9 +13,7 @@ export default function NotFound() {
 
       <Card className="relative w-full max-w-xl overflow-hidden">
         <CardHeader>
-          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-blue shadow-glow">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <SiteLogo className="mb-5" imageClassName="w-[172px]" />
           <div className="mb-3 inline-flex w-fit items-center gap-2 rounded-md border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-100">
             <AlertCircle className="h-3.5 w-3.5" />
             404 route not found

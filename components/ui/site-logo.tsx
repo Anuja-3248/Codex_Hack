@@ -4,6 +4,9 @@ import { cn } from "@/lib/utils";
 
 interface SiteLogoProps {
   className?: string;
+  href?: string;
+  imageClassName?: string;
+  priority?: boolean;
   textClassName?: string;
   showText?: boolean;
   size?: number;
@@ -11,30 +14,34 @@ interface SiteLogoProps {
 
 export function SiteLogo({
   className,
+  href = "/",
+  imageClassName,
+  priority = false,
   textClassName,
-  showText = true,
+  showText = false,
   size = 40
 }: SiteLogoProps) {
   return (
     <Link
-      href="/"
+      href={href}
       className={cn(
         "inline-flex items-center gap-3 transition hover:opacity-90",
         className
       )}
     >
-      <div
-        className="relative overflow-hidden rounded-2xl bg-slate-900/90 shadow-glow"
-        style={{ width: size, height: size }}
-      >
-        <Image
-          src="/images/pathforge-logo.svg"
-          alt="PathForge logo"
-          fill
-          className="object-contain"
-          sizes={`${size}px`}
-        />
-      </div>
+      <Image
+        src="/images/pathforge-logo.jpeg"
+        alt="PathForge logo"
+        width={604}
+        height={604}
+        priority={priority}
+        style={showText ? undefined : { width: size, height: "auto" }}
+        className={cn(
+          "h-auto object-contain",
+          showText ? "w-[168px]" : undefined,
+          imageClassName
+        )}
+      />
       {showText ? (
         <span className={cn("text-sm font-semibold text-white sm:text-base", textClassName)}>
           PathForge AI
