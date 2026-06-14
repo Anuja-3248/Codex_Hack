@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { SiteLogo } from "@/components/ui/site-logo";
 import { readDemoSession, saveDemoSession } from "@/lib/demo-auth";
 
 export default function LoginPage() {
@@ -24,6 +25,9 @@ export default function LoginPage() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-night p-4">
+      <div className="fixed left-4 top-4 z-50 rounded-3xl bg-slate-950/80 p-3 shadow-xl shadow-slate-900/15 backdrop-blur-xl sm:left-6 sm:top-6">
+        <SiteLogo showText={false} size={44} />
+      </div>
       <div className="absolute inset-0 subtle-grid opacity-50" />
       <div className="absolute inset-x-0 top-0 h-72 bg-forge-radial" />
 

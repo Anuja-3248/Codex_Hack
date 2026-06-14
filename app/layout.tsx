@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EduTrustChatbot } from "@/components/chatbot/edutrust-chatbot";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" data-scroll-behavior="smooth">
-      <body>{children}</body>
+      <body>
+        {children}
+        <EduTrustChatbot />
+      </body>
     </html>
   );
 }

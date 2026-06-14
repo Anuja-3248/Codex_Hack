@@ -17,6 +17,7 @@ import {
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SiteLogo } from "@/components/ui/site-logo";
 import { clearDemoSession, readDemoSession } from "@/lib/demo-auth";
 import { cn } from "@/lib/utils";
 
@@ -55,15 +56,10 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-night text-foreground">
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-72 border-r border-white/10 bg-slate-950/55 p-4 backdrop-blur-2xl lg:block">
-        <Link href="/" className="flex items-center gap-3 px-2 py-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-blue shadow-glow">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
-          <div>
-            <p className="text-base font-semibold text-white">PathForge AI</p>
-            <p className="text-xs text-slate-400">Career intelligence</p>
-          </div>
-        </Link>
+        <div className="px-2 py-3">
+          <SiteLogo />
+          <p className="mt-2 text-xs text-slate-400">Career intelligence</p>
+        </div>
 
         <nav className="mt-8 space-y-1.5">
           {navItems.map((item) => {

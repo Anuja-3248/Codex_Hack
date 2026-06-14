@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import { AnimatedCounter } from "@/components/animated-counter";
 import { Badge } from "@/components/ui/badge";
+import { SiteLogo } from "@/components/ui/site-logo";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -107,14 +108,7 @@ export function LandingPage() {
 
       <header className="relative z-10 border-b border-white/10 bg-slate-950/35 backdrop-blur-xl">
         <div className="container flex min-h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-blue shadow-glow">
-              <Sparkles className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-sm font-semibold text-white sm:text-base">
-              PathForge AI
-            </span>
-          </Link>
+          <SiteLogo />
           <nav className="hidden items-center gap-6 text-sm text-slate-400 md:flex">
             <a href="#dashboard-preview" className="hover:text-white">
               Dashboard
