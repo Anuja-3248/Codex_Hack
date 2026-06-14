@@ -80,7 +80,7 @@ export function EduTrustChatbot() {
                 ? "h-[calc(100vh-2rem)] w-[calc(100vw-2rem)] sm:h-[760px] sm:w-[760px]"
                 : "h-[min(690px,calc(100vh-7rem))] w-[calc(100vw-2.5rem)] sm:w-[430px]"
             )}
-            aria-label="EduTrust AI Assistant"
+            aria-label="Forgebot AI Assistant"
           >
             <div
               className={cn(
@@ -112,7 +112,7 @@ export function EduTrustChatbot() {
                         {getTimeGreeting()}
                       </p>
                       <h2 className="truncate text-lg font-extrabold tracking-tight">
-                        EduTrust AI Assistant
+                        Forgebot AI Assistant
                       </h2>
                       <p className={cn("text-xs", isDark ? "text-slate-400" : "text-slate-500")}>
                         Courses, careers, exams, colleges
@@ -285,7 +285,7 @@ export function EduTrustChatbot() {
         whileHover={{ y: -3, scale: 1.02 }}
         whileTap={{ scale: 0.96 }}
         className="group relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 text-white shadow-[0_18px_55px_rgba(37,99,235,0.38)]"
-        aria-label={isOpen ? "Close EduTrust AI Assistant" : "Open EduTrust AI Assistant"}
+        aria-label={isOpen ? "Close Forgebot AI Assistant" : "Open Forgebot AI Assistant"}
       >
         <span className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 blur-xl transition group-hover:opacity-100" />
         {isOpen ? <X className="relative h-7 w-7" /> : <MessageCircle className="relative h-7 w-7" />}

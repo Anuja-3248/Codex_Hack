@@ -36,7 +36,7 @@ export function createMessage(
 export function getWelcomeMessage(): EduTrustMessage {
   return createMessage(
     "ai",
-    "👋 Hi! I'm EduTrust AI Assistant. How can I help you today?",
+    "👋 Hi! I'm Forgebot AI Assistant. How can I help you today?",
     quickActions
   );
 }
