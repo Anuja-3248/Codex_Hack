@@ -76,3 +76,139 @@ body {
   background: rgba(148, 163, 184, 0.22);
   border-radius: 999px;
 }
+
+.homepage-palette {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(211, 223, 196, 0.85), transparent 26%),
+    #f5f4ea;
+  color: #020806;
+}
+
+.homepage-palette .subtle-grid {
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(2, 8, 6, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 8, 6, 0.045) 1px, transparent 1px);
+}
+
+.homepage-palette .bg-forge-radial {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(221, 231, 209, 0.88), transparent 30%),
+    transparent;
+}
+
+.homepage-palette header {
+  border-color: rgba(2, 8, 6, 0.8);
+  background: rgba(245, 244, 234, 0.86);
+}
+
+.homepage-palette h1,
+.homepage-palette h2,
+.homepage-palette h3,
+.homepage-palette .text-white,
+.homepage-palette .text-slate-200,
+.homepage-palette .text-slate-300 {
+  color: #020806;
+}
+
+.homepage-palette p,
+.homepage-palette .text-slate-400,
+.homepage-palette .text-muted-foreground {
+  color: #4f574d;
+}
+
+.homepage-palette .glass-card {
+  border-color: #020806;
+  background: rgba(245, 244, 234, 0.72);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.homepage-palette .border-white\/10,
+.homepage-palette .border-white\/15 {
+  border-color: rgba(2, 8, 6, 0.8);
+}
+
+.homepage-palette .bg-white\/\[0\.07\],
+.homepage-palette .bg-white\/\[0\.06\],
+.homepage-palette .bg-white\/\[0\.055\] {
+  background: rgba(221, 231, 209, 0.78);
+}
+
+.homepage-palette .bg-gradient-to-br,
+.homepage-palette .bg-gradient-to-r {
+  background-image: none;
+  background-color: #020806;
+}
+
+.homepage-palette .shadow-glow,
+.homepage-palette .shadow-glass {
+  box-shadow: none;
+}
+
+.homepage-palette a[href="/login"],
+.homepage-palette a[href="/dashboard"] {
+  border-color: #020806;
+}
+
+.homepage-palette a[href="/login"] {
+  background: #f5f4ea;
+  color: #020806;
+}
+
+.homepage-palette a[href="/dashboard"] {
+  background: #020806;
+  color: #f8f7ef;
+}
+
+.homepage-palette a[href="/login"] svg,
+.homepage-palette a[href="/dashboard"] svg,
+.homepage-palette header svg {
+  color: currentColor;
+}
+
+.homepage-palette .bg-mesh-subtle {
+  background: #dce7d1;
+}
+
+.homepage-palette [class*="text-cyan"],
+.homepage-palette [class*="text-violet"],
+.homepage-palette [class*="text-sky"],
+.homepage-palette [class*="text-emerald"] {
+  color: #10251f;
+}
+
+.homepage-palette [class*="border-purple"],
+.homepage-palette [class*="border-blue"],
+.homepage-palette [class*="border-cyan"],
+.homepage-palette [class*="border-emerald"] {
+  border-color: #020806;
+}
+
+.homepage-palette .homepage-final-cta .glass-card {
+  background: #000906;
+  border-color: #000906;
+}
+
+.homepage-palette .homepage-final-cta h2,
+.homepage-palette .homepage-final-cta h3,
+.homepage-palette .homepage-final-cta .text-white {
+  color: #f8f7ef;
+}
+
+.homepage-palette .homepage-final-cta p,
+.homepage-palette .homepage-final-cta .text-slate-400 {
+  color: #c7d1c1;
+}
+
+.homepage-palette .homepage-final-cta a[href="/login"] {
+  background: #f8f7ef;
+  color: #020806;
+  border-color: #f8f7ef;
+}
+
+.homepage-palette .homepage-final-cta a[href="/dashboard"] {
+  background: transparent;
+  color: #f8f7ef;
+  border-color: #f8f7ef;
+}

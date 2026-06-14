@@ -53,7 +53,7 @@ const steps = [
 
 export function LandingPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-night">
+    <main className="homepage-palette relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 subtle-grid opacity-60" />
       <div className="absolute inset-x-0 top-0 h-72 bg-forge-radial" />
 
@@ -102,16 +102,12 @@ export function LandingPage() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <Badge variant="blue" className="mb-5">
-              <Sparkles className="mr-2 h-3.5 w-3.5" />
-              Assessment - Analysis - Action - Opportunities
-            </Badge>
             <h1 className="text-balance text-5xl font-semibold tracking-normal text-white sm:text-6xl lg:text-7xl">
-              Forge Your Future with AI
+              Find Your Next Career Move
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Identify skill gaps, receive personalized assignments, track
-              progress, and discover career opportunities using AI.
+              Personalized assessments, assignments, and opportunities powered
+              by AI.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
@@ -137,12 +133,12 @@ export function LandingPage() {
             <div className="absolute -inset-4 rounded-[2rem] bg-mesh-subtle opacity-80 blur-2xl" />
             <div className="glass-card relative overflow-hidden rounded-lg p-2">
               <Image
-                src="/images/pathforge-dashboard-preview.png"
-                alt="Futuristic PathForge AI dashboard preview"
+                src="/images/hero-students.jpg"
+                alt="Student preparing online with PathForge AI"
                 width={1280}
                 height={900}
                 priority
-                className="aspect-[16/11] w-full rounded-md object-cover"
+                className="aspect-[16/11] w-full rounded-md object-cover object-top"
               />
             </div>
           </motion.div>
@@ -233,7 +229,7 @@ export function LandingPage() {
         </div>
       </section>
 
-      <section className="relative z-10 pb-20">
+      <section className="homepage-final-cta relative z-10 pb-20">
         <div className="container">
           <div className="glass-card overflow-hidden rounded-lg p-8 sm:p-10">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
