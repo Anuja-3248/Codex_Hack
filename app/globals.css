@@ -212,3 +212,42 @@ body {
   color: #f8f7ef;
   border-color: #f8f7ef;
 }
+
+.homepage-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.homepage-carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: homepage-carousel-scroll 28s linear infinite;
+}
+
+.homepage-carousel:hover .homepage-carousel-track {
+  animation-play-state: paused;
+}
+
+.homepage-path-card {
+  display: flex;
+  min-width: 250px;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid #020806;
+  border-radius: 0.5rem;
+  background: rgba(245, 244, 234, 0.78);
+  padding: 1.25rem;
+  color: #020806;
+  font-weight: 700;
+}
+
+@keyframes homepage-carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
