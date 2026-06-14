@@ -15,10 +15,10 @@ export default function AssignmentsPage() {
               <Target className="mr-2 h-3.5 w-3.5" />
               Personalized Assignments
             </Badge>
-            <CardTitle className="text-3xl">AI-generated improvement tasks</CardTitle>
+            <CardTitle className="text-3xl">Gap-generated improvement tasks</CardTitle>
             <p className="max-w-2xl text-sm leading-6 text-slate-400">
-              These assignments target the exact gaps found in your latest
-              assessment and analysis.
+              Assignments are generated from the weakest assessment categories,
+              then tracked with concrete deliverables and checklist progress.
             </p>
           </CardHeader>
         </Card>
