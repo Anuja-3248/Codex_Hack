@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   BarChart3,
   Bell,
@@ -14,7 +15,9 @@ import {
   Trophy
 } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { clearDemoSession, readDemoSession } from "@/lib/demo-auth";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -27,6 +30,27 @@ const navItems = [
 
 export function DashboardShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
+  useEffect(() => {
+    const session = readDemoSession();
+
+    if (!session) {
+      router.replace("/login");
+      return;
+    }
+
+    setIsAuthorized(true);
+  }, [router]);
+
+  if (!isAuthorized) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-night px-4 text-slate-300">
+        Checking demo access...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-night text-foreground">
@@ -101,6 +125,17 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
             </div>
 
             <div className="ml-auto flex items-center gap-2">
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  clearDemoSession();
+                  router.push("/login");
+                }}
+              >
+                Sign out
+              </Button>
               <button
                 className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.05] text-slate-300 transition hover:bg-white/[0.09] hover:text-white"
                 aria-label="Notifications"
