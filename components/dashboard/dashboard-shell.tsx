@@ -8,8 +8,6 @@ import {
   BrainCircuit,
   ClipboardCheck,
   Gauge,
-  GraduationCap,
-  LayoutDashboard,
   Search,
   Sparkles,
   Target,
@@ -20,7 +18,6 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/assessment", label: "Assessment", icon: ClipboardCheck },
   { href: "/analysis", label: "Analysis", icon: BrainCircuit },
   { href: "/assignments", label: "Assignments", icon: Target },

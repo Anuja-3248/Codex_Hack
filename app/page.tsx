@@ -1,5 +1,10 @@
-import { LandingPage } from "@/components/landing-page";
+import { DashboardHome } from "@/components/dashboard/dashboard-home";
+import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 
 export default function Home() {
-  return <LandingPage />;
+  return (
+    <DashboardShell>
+      <DashboardHome />
+    </DashboardShell>
+  );
 }
